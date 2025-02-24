@@ -1,0 +1,148 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2196f3;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal */
+.contenedor_mapa {
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del mapa */
+.mapa {
+    flex: 3;
+    min-height: 600px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa svg {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.mapa svg:hover {
+    transform: scale(1.02);
+}
+
+path {
+    fill: #ccc;
+    stroke: black;
+    stroke-width: 1.5;
+    cursor: pointer;
+    
+}
+
+path:hover {
+    fill: #a93226;
+}
+
+/* Lista de capitales */
+.contenedor_capitales {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#lista-capitales h2 {
+    color: #1976d2;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#capitales-lista {
+    list-style: none;
+    padding: 0;
+}
+
+#capitales-lista li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#capitales-lista li:hover {
+    background-color: #e3f2fd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+#capitalSeleccionada{
+    background-color: #28b463;
+    
+}
+
+
+/* Diseño responsivo */
+@media (max-width: 900px) {
+    .contenedor_mapa {
+        flex-direction: column;
+    }
+
+    .mapa {
+        min-height: 400px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+/* Animaciones */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenedor_mapa {
+    animation: aparecer 0.5s ease-out;
+}

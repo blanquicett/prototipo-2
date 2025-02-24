@@ -1,0 +1,109 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    overflow: hidden;
+    background: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Fondo dinámico */
+.fondo-dinamico {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #c39bd3, #641e16, #f7dc6f,#229954, #aed6f1);
+    background-size: 400% 400%;
+    animation: fondoAnimado 10s ease infinite;
+    z-index: -1;
+}
+
+@keyframes fondoAnimado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenedor de selección */
+.contenedor-seleccion {
+    text-align: center;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #34495e;
+    text-shadow: 2px 2px 5px rgba(255, 111, 97, 0.3);
+}
+
+/* Botones de juegos */
+.botones-juegos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.boton {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background: #34495e;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255, 111, 97, 0.3);
+}
+
+.boton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.boton:hover {
+    background: #1f618d;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 111, 97, 0.5);
+}
+
+.boton:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Efecto de brillo en los botones */
+.boton::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.boton:hover::after {
+    left: 100%;
+}

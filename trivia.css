@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.contenedor-trivia {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+}
+
+.pregunta {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.opciones button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.opciones button:hover {
+    background: #ddd;
+}
+
+.correcto {
+    background: #4CAF50 !important;
+    color: white;
+}
+
+.incorrecto {
+    background: #E74C3C !important;
+    color: white;
+}
+
+.temporizador {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ff5733;
+}
+/* Estilos para el modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-contenido h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.modal-contenido p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.modal-contenido button {
+    padding: 0.5rem 1rem;
+    background: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.modal-contenido button:hover {
+    background: #ff4a3d;
+}
+/* Estilos para el mensaje de racha */
+.mensaje-racha {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Estilos para el power-up */
+.power-up {
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { top: -50px; }
+    to { top: 20px; }
+}
+/* Estilo par la racha y puntos */
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.racha, .puntos {
+    display: flex;
+    align-items: center;
+}
+
+.racha span, .puntos span {
+    margin-left: 5px;
+    color: yellow;
+    font-size: 20px;
+}
+

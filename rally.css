@@ -1,0 +1,76 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor-juego {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 20px; /* Añadir margen superior */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2196F3;
+}
+
+.info {
+    margin-bottom: 1.5rem;
+}
+
+.info p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.mapa {
+    width: 80%; /* Reducir el tamaño del mapa */
+    margin: 0 auto 1.5rem auto; /* Centrar el mapa */
+}
+
+.mapa svg {
+    width: 70%;
+    height: auto;
+}
+
+.mapa path {
+    fill: white;
+    stroke: black;
+    stroke-width: 1.2px;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.mapa path:hover {
+    fill: #d4ac0d;
+}
+
+
+button {
+    padding: 0.5rem 1rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
